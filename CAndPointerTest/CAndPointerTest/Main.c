@@ -16,14 +16,16 @@ extern void Test_1_3();
 extern void Test_1_4();
 #pragma endregion
 
+extern void  BracesMatch();
 
 int main()
 {
-	Ch_1_Test1();
+	//Ch_1_Test1();
 	//Test_1_1();
 	//Test_1_2();
 	//Test_1_3();
 	//Test_1_4();
+	BracesMatch();
 	system("pause");
 	return 0;
 }

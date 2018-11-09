@@ -24,5 +24,8 @@
     <ClCompile Include="Ch1_Test2.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Ch2_Test1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
