@@ -17,7 +17,7 @@ extern void Test_1_4();
 #pragma endregion
 
 extern void  BracesMatch();
-
+extern void MySqrt();
 int main()
 {
 	//Ch_1_Test1();
@@ -25,7 +25,8 @@ int main()
 	//Test_1_2();
 	//Test_1_3();
 	//Test_1_4();
-	BracesMatch();
+	//BracesMatch();
+	MySqrt();
 	system("pause");
 	return 0;
 }
