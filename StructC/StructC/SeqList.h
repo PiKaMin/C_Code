@@ -202,8 +202,8 @@ void SeqListRemoveAll(SeqList *pSeq, DataType data)
 
 	//}
 
-
-	//2.一次遍历删除 优点：快，一次遍历  缺点：开辟了新的空间
+#if 0
+	//2.一次遍历删除 优点：快，一次遍历  缺点：开辟了新的空间，空间大小和size有关系
 	//1) 开新数组
 	DataType* newArr = malloc(sizeof(DataType) * pSeq->size);
 	int i, j;
@@ -230,5 +230,18 @@ void SeqListRemoveAll(SeqList *pSeq, DataType data)
 
 	//释放内存
 	free(newArr);
+#endif
+	
+	//第三种方法
+	int i, j;
+	for (i = 0, j = 0; i < pSeq->size; i++)
+	{
+		if (pSeq->array[i] != data)
+		{
+			pSeq->array[j] = pSeq->array[i];
+			j++;
+		}
+	}
+	pSeq->size = j;
 }
 
