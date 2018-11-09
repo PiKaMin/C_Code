@@ -244,4 +244,61 @@ void SeqListRemoveAll(SeqList *pSeq, DataType data)
 	}
 	pSeq->size = j;
 }
+//√∞≈›≈≈–Ú,…˝–Ú
+void SeqListBubbleSort(SeqList* pSeq)
+{
+	int isSorted;
+	for (int i = 0; i < pSeq->size - 1; i++)
+	{
+		isSorted = 1;
+		for (int j = 0; j < pSeq->size - 1 - i; j++)
+		{
+			if (pSeq->array[j] > pSeq->array[j + 1])
+			{
+				DataType temp = pSeq->array[j];
+				pSeq->array[j] = pSeq->array[j + 1];
+				pSeq->array[j + 1] = temp;
+				isSorted = 0;
+			}
+		}
+		if (isSorted) break;
+	}
+}
+
+//≤‚ ‘¥˙¬Î
+void SeqListTest()
+{
+	SeqList seqList;
+	SeqListInit(&seqList);
+	SeqListPushBack(&seqList, 300);
+	SeqListPushBack(&seqList, 200);
+	SeqListPushBack(&seqList, 100);
+	SeqListPushBack(&seqList, 10);
+	SeqListPushBack(&seqList, 20);
+	SeqListPushBack(&seqList, 30);
+	SeqListPushBack(&seqList, 40);
+	SeqListPushBack(&seqList, 50);
+	SeqListPushBack(&seqList, 50);
+	SeqListPushBack(&seqList, 50);
+	SeqListPushBack(&seqList, 50);
+	SeqListPushBack(&seqList, 80);
+	SeqListPushBack(&seqList, 90);
+	SeqListPushBack(&seqList, 400);
+	//SeqListDestory(&seqList);  œ˙ªŸ
+	//SeqListPushFront(&seqList, 100); Õ∑≤Â
+	//SeqListInsert(&seqList, 0, 100);
+	//SeqListInsert(&seqList, 2, 100); ÷–º‰≤Â»Î 
+	//SeqListInsert(&seqList, 4, 100);
+
+	//SeqListPopBack(&seqList);
+	//SeqListPopFront(&seqList);
+	//SeqListErase(&seqList, 4);
+
+	SeqListPrint(&seqList);
+
+	SeqListRemoveAll(&seqList, 50);
+	SeqListBubbleSort(&seqList);
+
+	SeqListPrint(&seqList);
+}
 
