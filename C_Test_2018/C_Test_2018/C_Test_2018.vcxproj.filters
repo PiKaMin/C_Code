@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\第四次作业">
+      <UniqueIdentifier>{885c423f-7908-419e-9797-bec3894a019b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\课堂示例题目">
+      <UniqueIdentifier>{b0ccc30c-6bdb-4f66-8785-8c25aed6b8db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\第五次作业">
+      <UniqueIdentifier>{10d40ed5-cd49-4575-8517-62b5295a1c6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\第六次作业">
+      <UniqueIdentifier>{0b2c151a-3017-4854-96c0-c069eb6b5268}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\第七次作业">
+      <UniqueIdentifier>{13608a48-1643-4397-abde-55a71af80c48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_01_10_31.c">
+      <Filter>源文件\第四次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_02_10_31.c">
+      <Filter>源文件\第四次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_03_10_31.c">
+      <Filter>源文件\第四次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="bin_search.c">
+      <Filter>源文件\课堂示例题目</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_01_11_2.c">
+      <Filter>源文件\第五次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_02_11_2.c">
+      <Filter>源文件\第五次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_03_11_2.c">
+      <Filter>源文件\第五次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_04_11_2.c">
+      <Filter>源文件\第五次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_01_11_4.c">
+      <Filter>源文件\第六次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_02_11_4.c">
+      <Filter>源文件\第六次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_03_11_4.c">
+      <Filter>源文件\第六次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_04_11_4.c">
+      <Filter>源文件\第六次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_05_11_4.c">
+      <Filter>源文件\第六次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_01_11_7.c">
+      <Filter>源文件\第七次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_02_11_7.c">
+      <Filter>源文件\第七次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_03_11_7.c">
+      <Filter>源文件\第七次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_04_11_7.c">
+      <Filter>源文件\第七次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_06_11_7.c">
+      <Filter>源文件\第七次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_05_11_7.c">
+      <Filter>源文件\第七次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_07_11_7.c">
+      <Filter>源文件\第七次作业</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
