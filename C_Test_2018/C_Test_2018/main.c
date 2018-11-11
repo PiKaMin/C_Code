@@ -1,6 +1,8 @@
+
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "Test_01_11_10.h"
 //所有的C语言作业运行测试
 //2018年 10 月 31 日开始
 
@@ -35,6 +37,15 @@ extern void reverse_string(char * string);
 void PrintArr(int* arr, int length);
 int main()
 {
+	//1. 初始化游戏
+	InitBorad();
+	//2. 打印棋盘
+	PrintBoard();
+	//3.游戏循环
+	BoradGameLoop();
+
+	system("pause");
+	return 0;
 	//PrintDiamond(15);
 	//PrintNarcissisticNumber();
 	//PolynomialSum(2);
@@ -64,11 +75,12 @@ int main()
 	//printf("%d\n" , MyStrlenRecursion("hello"));
 	//printf("\n");
 	//PrintNumber(123456);;
-	char s[] = "hello";
+	/*char s[] = "hello";
 	reverse_string(s);
-	printf("%s\n" , s);
-	system("pause");
-	return 0;
+	printf("%s\n" , s);*/
+
+
+	
 }
 
 void PrintArr(int* arr, int length)

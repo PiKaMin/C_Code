@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="bin_search.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="Test_01_11_10.h" />
     <ClCompile Include="Test_03_11_7.c" />
     <ClCompile Include="Test_01_10_31.c" />
     <ClCompile Include="Test_01_11_2.c" />
