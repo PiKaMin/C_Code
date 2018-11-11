@@ -7,7 +7,7 @@
 #define COL 3
 #define RULER 3          //规则：当前规则3子棋
 char g_board[ROW][COL];
-int g_startCheck = 0;    //是否开始检查
+int g_startCheck = 0;    //1.是否开始检查   2.已经下的棋数
 
 //三子棋程序
 //初始化棋盘，全部为空格
@@ -72,6 +72,7 @@ static void ComputerRound()
 		int col = rand() % 3;
 		if (g_board[row][col] != ' ') continue;
 		g_board[row][col] = 'o';
+		g_startCheck++;
 		break;
 	}
 	//更新棋盘
@@ -82,8 +83,8 @@ static void ComputerRound()
 static char CheckIsGameOver(char checkChar)
 {
 	
-	//0. 棋盘上的棋不足检查规则
-	if (g_startCheck < RULER) return 'g';
+	//0. 棋盘上的棋不足检查规则，玩家下的棋大于等于3时开始检查
+	if (g_startCheck < RULER * 2 - 1) return 'g';
 	//1. 检查行
 	for (int row = 0; row < ROW; row++)
 	{
@@ -113,7 +114,7 @@ static char CheckIsGameOver(char checkChar)
 	//4. 检查和棋 ,上面条件都没有满足，说明还没有一方胜利
 	//未下满棋盘且没有胜利返回 g  继续游戏
 	//下满棋盘且没有胜利返回   p  平局
-	if (g_startCheck <= (ROW * COL) / 2)  //没有下满,且没有胜利者
+	if (g_startCheck < ROW * COL)  //没有下满,且没有胜利者
 	{
 
 		return 'g';
