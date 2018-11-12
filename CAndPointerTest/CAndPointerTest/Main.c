@@ -18,6 +18,7 @@ extern void Test_1_4();
 
 extern void  BracesMatch();
 extern void MySqrt();
+extern void PrintPrime();
 int main()
 {
 	//Ch_1_Test1();
@@ -26,7 +27,8 @@ int main()
 	//Test_1_3();
 	//Test_1_4();
 	//BracesMatch();
-	MySqrt();
+	//MySqrt();
+	PrintPrime();
 	system("pause");
 	return 0;
 }

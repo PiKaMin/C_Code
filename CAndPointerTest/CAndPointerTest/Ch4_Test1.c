@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
+#include <math.h>
 //编程练习 4.1
 //利用近似值求  正数n  的平方根
 //计算过程：第一个近似值为1，接下来的近似值计算公式为：next = （now + （n / now）） / 2
@@ -23,4 +23,24 @@ void MySqrt()
 	}
 
 	printf("结果为:%f\n" , nowNum);
+}
+
+//编程练习4.2 打印1~100的质数
+void PrintPrime()
+{
+	int isPrime = 1;
+	for (int i = 2; i <= 100; i++)
+	{
+		for (int j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				isPrime = 0;
+				break; 
+			}
+			isPrime = 1;
+		}
+		if (isPrime) printf("%d\n" , i);
+		
+	}
 }
