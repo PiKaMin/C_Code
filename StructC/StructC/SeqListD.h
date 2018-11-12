@@ -25,6 +25,7 @@ void SeqListDInit(SeqListD* pSeq)
 	assert(pSeq->array);
 }
 
+//销毁
 void SeqlistDDestory(SeqListD* pSeq)
 {
 	assert(pSeq->array);
@@ -56,6 +57,7 @@ static void ExpandIfRequired(SeqListD* pSeq)
 	//5.让动态顺序表的指针指向新的空间
 	pSeq->array = newArr;
 }
+//增 尾插
 void SeqListDPushBack(SeqListD* pSeq, DataType data)
 {
 	//如果满了，扩容 capacity >= size
@@ -63,6 +65,20 @@ void SeqListDPushBack(SeqListD* pSeq, DataType data)
 	pSeq->array[pSeq->size++] = data;
 }
 
+//增 头插
+void SeqListDPushFront(SeqListD* pSeq , DataType data)
+{
+	ExpandIfRequired(pSeq);
+
+	//搬移数据
+	for (int i = pSeq->size - 1; i >= 0; i--)
+	{
+		pSeq->array[i + 1] = pSeq->array[i];
+	}
+
+	pSeq->array[0] = data;
+	pSeq->size++;
+}
 
 
 void PrintSeqListD(SeqListD* pSeq)
@@ -79,24 +95,24 @@ void SeqListDTest()
 {
 	SeqListD seqListD;
 	SeqListDInit(&seqListD);
-	SeqListDPushBack(&seqListD, 1);
-	SeqListDPushBack(&seqListD, 2);
-	SeqListDPushBack(&seqListD, 3);
-	SeqListDPushBack(&seqListD, 4);
-	SeqListDPushBack(&seqListD, 5);
-	SeqListDPushBack(&seqListD, 6);
-	SeqListDPushBack(&seqListD, 7);
-	SeqListDPushBack(&seqListD, 8);
-	printf("%d " , seqListD.capacity);
-	SeqListDPushBack(&seqListD, 1);
-	SeqListDPushBack(&seqListD, 2);
-	SeqListDPushBack(&seqListD, 3);
-	SeqListDPushBack(&seqListD, 4);
-	SeqListDPushBack(&seqListD, 5);
-	SeqListDPushBack(&seqListD, 6);
-	SeqListDPushBack(&seqListD, 7);
-	SeqListDPushBack(&seqListD, 8);
+	
+	SeqListDPushFront(&seqListD, 10);
+	SeqListDPushFront(&seqListD, 9);
+	SeqListDPushFront(&seqListD, 8);
+	SeqListDPushFront(&seqListD, 7);
+	SeqListDPushFront(&seqListD, 6);
+	SeqListDPushFront(&seqListD, 5);
+	SeqListDPushFront(&seqListD, 4);
+	SeqListDPushFront(&seqListD, 3);
+	SeqListDPushFront(&seqListD, 2);
+	SeqListDPushFront(&seqListD, 1);
+	SeqListDPushFront(&seqListD, 0);
+	SeqListDPushFront(&seqListD, -1);
+	SeqListDPushFront(&seqListD, -2);
+	SeqListDPushFront(&seqListD, -3);
+	SeqListDPushFront(&seqListD, -4);
+	SeqListDPushFront(&seqListD, -5);
 
-	printf("%d ", seqListD.capacity);
+	//printf("%d ", seqListD.capacity);
 	PrintSeqListD(&seqListD);
 }
