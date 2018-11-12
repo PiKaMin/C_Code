@@ -119,6 +119,7 @@
     <ClCompile Include="Ch1_Test2.c" />
     <ClCompile Include="Ch2_Test1.c" />
     <ClCompile Include="Ch4_Test1.c" />
+    <ClCompile Include="Ch5_Test1.c" />
     <ClCompile Include="Main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

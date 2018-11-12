@@ -13,22 +13,37 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Ch1">
+      <UniqueIdentifier>{cd6d8a42-d857-4ea7-8b21-770d1470d560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Ch2">
+      <UniqueIdentifier>{255306e8-bd6d-4521-ad8b-88c3e8de09c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Ch4">
+      <UniqueIdentifier>{43cf27b5-8419-498d-bbf6-b98379b777b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Ch5">
+      <UniqueIdentifier>{34aa3fe5-b979-446c-82f5-a753f4e8bd8a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Ch1_Test1.c">
-      <Filter>源文件</Filter>
+      <Filter>源文件\Ch1</Filter>
     </ClCompile>
     <ClCompile Include="Ch1_Test2.c">
-      <Filter>源文件</Filter>
+      <Filter>源文件\Ch1</Filter>
     </ClCompile>
     <ClCompile Include="Ch2_Test1.c">
-      <Filter>源文件</Filter>
+      <Filter>源文件\Ch2</Filter>
     </ClCompile>
     <ClCompile Include="Ch4_Test1.c">
-      <Filter>源文件</Filter>
+      <Filter>源文件\Ch4</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch5_Test1.c">
+      <Filter>源文件\Ch5</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
