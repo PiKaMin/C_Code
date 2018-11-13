@@ -57,7 +57,7 @@ static void ExpandIfRequired(SeqListD* pSeq)
 	//5.让动态顺序表的指针指向新的空间
 	pSeq->array = newArr;
 }
-//增 尾插
+//增 1. 尾插
 void SeqListDPushBack(SeqListD* pSeq, DataType data)
 {
 	//如果满了，扩容 capacity >= size
@@ -65,7 +65,7 @@ void SeqListDPushBack(SeqListD* pSeq, DataType data)
 	pSeq->array[pSeq->size++] = data;
 }
 
-//增 头插
+//增 2. 头插
 void SeqListDPushFront(SeqListD* pSeq , DataType data)
 {
 	ExpandIfRequired(pSeq);
@@ -80,7 +80,87 @@ void SeqListDPushFront(SeqListD* pSeq , DataType data)
 	pSeq->size++;
 }
 
+//增 3. 插入   
+void SeqListDInsert(SeqListD* pSeq, int index, DataType data)
+{
+	assert(pSeq);
+	assert(index <= pSeq->size &&index >= 0);
 
+	ExpandIfRequired(pSeq);
+
+	
+	for (int i = pSeq->size - 1; i >= index; i--)
+	{
+		pSeq->array[i + 1] = pSeq->array[i];
+	}
+
+	pSeq->array[index] = data;
+	pSeq->size++;
+	
+}
+//删除 1.尾删
+void SeqListDPopBack(SeqListD* pSeq)
+{
+	assert(pSeq);
+	assert(pSeq->size > 0);
+
+	pSeq->size--;
+}
+//删除 2. 头删
+void SeqListDPopFront(SeqListD* pSeq)
+{
+	assert(pSeq);
+	assert(pSeq->size > 0);
+
+	for (int i = 1; i < pSeq->size; i++)
+	{
+		pSeq->array[i - 1] = pSeq->array[i];
+	}
+
+	pSeq->size--;
+
+}
+//删除  3.删除指定位置
+void SeqListDErase(SeqListD* pSeq, int index)
+{
+	assert(pSeq);
+	assert(index >= 0 && index < pSeq->size);
+
+	for (int i = index + 1; i < pSeq->size; i++)
+	{
+		pSeq->array[i - 1] = pSeq->array[i];
+	}
+
+	pSeq->size--;
+}
+//删除  清空
+void SeqListDEmpty(SeqListD* pSeq)
+{
+	for (int i = 0; i < pSeq->size; i++)
+	{
+		SeqListDPopBack(pSeq);
+	}
+
+	pSeq->size = 0;
+}
+//修改指定下标的元素
+void SeqListDSet(SeqListD* pSeq, int index , DataType data)
+{
+	assert(pSeq);
+	assert(index >= 0 && index < pSeq->size);
+
+	pSeq->array[index] = data;
+}
+// 查询
+DataType SeqListDGet(SeqListD* pSeq, int index)
+{
+	assert(pSeq);
+	assert(index >= 0 && index < pSeq->size);
+
+	return pSeq->array[index];
+}
+
+//打印顺序表
 void PrintSeqListD(SeqListD* pSeq)
 {
 	assert(pSeq);
@@ -91,28 +171,32 @@ void PrintSeqListD(SeqListD* pSeq)
 	printf("\n");
 
 }
+
+//测试函数
 void SeqListDTest()
 {
 	SeqListD seqListD;
 	SeqListDInit(&seqListD);
 	
-	SeqListDPushFront(&seqListD, 10);
-	SeqListDPushFront(&seqListD, 9);
-	SeqListDPushFront(&seqListD, 8);
-	SeqListDPushFront(&seqListD, 7);
-	SeqListDPushFront(&seqListD, 6);
-	SeqListDPushFront(&seqListD, 5);
-	SeqListDPushFront(&seqListD, 4);
-	SeqListDPushFront(&seqListD, 3);
-	SeqListDPushFront(&seqListD, 2);
-	SeqListDPushFront(&seqListD, 1);
-	SeqListDPushFront(&seqListD, 0);
-	SeqListDPushFront(&seqListD, -1);
-	SeqListDPushFront(&seqListD, -2);
-	SeqListDPushFront(&seqListD, -3);
-	SeqListDPushFront(&seqListD, -4);
-	SeqListDPushFront(&seqListD, -5);
+	SeqListDPushBack(&seqListD, 0);
+	SeqListDPushBack(&seqListD, 1);
+	SeqListDPushBack(&seqListD, 2);
+	SeqListDPushBack(&seqListD, 3);
+	SeqListDPushBack(&seqListD, 4);
+	SeqListDPushBack(&seqListD, 5);
+	
+	SeqListDSet(&seqListD, 0, 10);
+	SeqListDSet(&seqListD, 1, 100);
+	SeqListDSet(&seqListD, 2, 1000);
+	SeqListDSet(&seqListD, 3, 10000);
+	SeqListDSet(&seqListD, 4, 100000);
+	SeqListDSet(&seqListD, 5, 1000000);
 
+	SeqListDEmpty(&seqListD);
 	//printf("%d ", seqListD.capacity);
 	PrintSeqListD(&seqListD);
+	/*for (int i = 0; i < seqListD.size; i++)
+	{
+		printf("%d ", SeqListDGet(&seqListD, i));
+	}*/
 }
