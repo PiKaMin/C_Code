@@ -159,6 +159,26 @@ DataType SeqListDGet(SeqListD* pSeq, int index)
 
 	return pSeq->array[index];
 }
+//≈≈–Ú  Ωµ–Ú
+void SeqListDBubbleSort(SeqListD* pSeq)
+{
+	int isSorted = 1;
+	for (int i = 0; i < pSeq->size - 1; i++)
+	{
+		for (int j = 0; j < pSeq->size - i - 1; j++)
+		{
+			if (pSeq->array[j] < pSeq->array[j + 1])
+			{
+				isSorted = 0;
+				int temp = pSeq->array[j];
+				pSeq->array[j] = pSeq->array[j + 1];
+				pSeq->array[j + 1] = temp;
+			}
+		}
+		if (isSorted) break;
+	}
+
+}
 
 //¥Ú”°À≥–Ú±Ì
 void PrintSeqListD(SeqListD* pSeq)
@@ -192,8 +212,9 @@ void SeqListDTest()
 	SeqListDSet(&seqListD, 4, 100000);
 	SeqListDSet(&seqListD, 5, 1000000);
 
-	SeqListDEmpty(&seqListD);
+	//SeqListDEmpty(&seqListD);
 	//printf("%d ", seqListD.capacity);
+	SeqListDBubbleSort(&seqListD);
 	PrintSeqListD(&seqListD);
 	/*for (int i = 0; i < seqListD.size; i++)
 	{
