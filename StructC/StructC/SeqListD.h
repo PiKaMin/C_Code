@@ -203,7 +203,7 @@ void SeqListDTest()
 	SeqListDPushBack(&seqListD, 2);
 	SeqListDPushBack(&seqListD, 3);
 	SeqListDPushBack(&seqListD, 4);
-	SeqListDPushBack(&seqListD, 5);
+	SeqListDPushBack(&seqListD, 5); 
 	
 	SeqListDSet(&seqListD, 0, 10);
 	SeqListDSet(&seqListD, 1, 100);
