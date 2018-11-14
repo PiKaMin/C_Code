@@ -102,6 +102,60 @@ void LinkedListPopBack(LinkedListNode** ppFirst)
 	free(temp->next);
 	temp->next = NULL;
 }
+//查找
+LinkedListNode* LinkedListFind(LinkedListNode* pFirst , DataType data)
+{
+	for (LinkedListNode* temp = pFirst; temp != NULL; temp = temp->next)
+	{
+		if (data == temp->data)
+		{
+			return temp;
+		}
+	}
+	return NULL;
+}
+//在结点前做插入
+void LinkedListInsert(LinkedListNode** ppFirst, LinkedListNode* pos, DataType data)
+{
+	//头插 
+	if (*ppFirst == pos)
+	{
+		LinkedListPushFront(ppFirst, data);
+		return;
+	}
+
+	//一般情况
+	LinkedListNode* temp = *ppFirst;
+	while (temp->next != pos)
+	{
+		temp = temp->next;
+	}
+
+	LinkedListNode* newNode = CreateNewNode(data);
+	newNode->next = temp->next;
+	temp->next = newNode;
+}
+//删除指定结点
+void LinkeListErase(LinkedListNode** ppFirst, LinkedListNode* pos)
+{
+	//头删
+	if (*ppFirst == pos)
+	{
+		LinkedListPopFront(ppFirst);
+		return;
+	}
+
+	LinkedListNode* temp = *ppFirst;
+	while (temp->next != pos)
+	{
+		temp = temp->next;
+	}
+	
+	temp->next = pos->next;
+	free(pos);
+	pos = NULL;
+}
+//打印
 void LikedListPrint(LinkedListNode* const pFirst)
 {
 	for (LinkedListNode* temp = pFirst; temp != NULL; temp = temp->next)
@@ -123,9 +177,12 @@ void LinkedListTest()
 	LinkedListPushBack(&first, 5);
 	LinkedListPushBack(&first, 6);
 
+	LinkedListInsert(&first, LinkedListFind(first, 5), -10);
 
-	LinkedListPopBack(&first);
-	LinkedListPopBack(&first);
+	LinkedListInsert(&first, LinkedListFind(first, 6), -12);
+
+	/*LinkedListPopBack(&first);
+	LinkedListPopBack(&first);*/
 	//sLinkedListPopBack(&first);
 	//LinkedListPopBack(&first);
 	//LinkedListPopBack(&first);
