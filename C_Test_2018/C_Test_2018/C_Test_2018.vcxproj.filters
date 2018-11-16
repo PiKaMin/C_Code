@@ -31,6 +31,9 @@
     <Filter Include="源文件\第八次作业">
       <UniqueIdentifier>{813f79cc-9a6f-44cf-8da8-079d73b3b2d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\第九次作业">
+      <UniqueIdentifier>{d79d41c1-b6af-4c85-ab36-4c079270b392}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -99,5 +102,10 @@
     <ClCompile Include="Test_01_11_10.h">
       <Filter>源文件\第八次作业</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Test_09_11_16.h">
+      <Filter>源文件\第九次作业</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

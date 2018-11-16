@@ -164,6 +164,82 @@ void LikedListPrint(LinkedListNode* const pFirst)
 	}
 	printf("\n");
 }
+
+//***************************************
+//***********链表面试题******************
+//***************************************
+
+
+//1. 从尾到头打印单链表
+//利用递归
+void LinkedListPrintReverseRecursion(LinkedListNode* pCur)
+{	
+	if (pCur == NULL) return;
+
+	LinkedListPrintReverseRecursion(pCur->next);
+	printf("%d ", pCur->data);
+}
+//非递归
+void LinkedListPrintReverse(LinkedListNode* pFirst)
+{
+	LinkedListNode* end = NULL;
+	while (end != pFirst)
+	{
+		LinkedListNode* temp = pFirst;
+		while (temp->next != end)
+		{
+			temp = temp->next;
+		}
+		printf("%d " , temp->data);
+
+		end = temp;
+	}
+	printf("\n");
+}
+
+//2. 逆置反转单链表 , 再原链表上
+void LinkedListReverse(LinkedListNode** ppFirst)
+{
+	
+	LinkedListNode* temp = *ppFirst;
+
+	while (temp != NULL)
+	{
+		LinkedListNode* next = temp->next;
+		if (temp == *ppFirst)
+		{
+			temp->next = NULL;
+		}
+		else
+		{
+			temp->next = *ppFirst;
+			*ppFirst = temp;
+		}
+		temp = next;
+	
+	}
+}
+//逆置链表，返回新链表
+//一个链表头删，一个链表头插
+LinkedListNode* LinkedListReverseNew(LinkedListNode* pFirst)
+{
+	LinkedListNode* cur = pFirst;
+	LinkedListNode* node;
+	LinkedListNode* result = NULL;
+
+	while (cur != NULL)
+	{
+		node = cur;
+		cur = cur->next;
+
+		node->next = result;
+		result = node;
+	}
+
+	return result;
+}
+
+
 //链表测试函数
 void LinkedListTest()
 {
@@ -174,13 +250,13 @@ void LinkedListTest()
 	LinkedListPushFront(&first, 2);
 	LinkedListPushFront(&first, 1);*/
 
+	LinkedListPushBack(&first, 1);
+	LinkedListPushBack(&first, 2);
+	LinkedListPushBack(&first, 3);
+	LinkedListPushBack(&first, 4);
 	LinkedListPushBack(&first, 5);
-	LinkedListPushBack(&first, 6);
 
-	LinkedListInsert(&first, LinkedListFind(first, 5), -10);
-
-	LinkedListInsert(&first, LinkedListFind(first, 6), -12);
-
+	LinkedListReverse(&first);
 	/*LinkedListPopBack(&first);
 	LinkedListPopBack(&first);*/
 	//sLinkedListPopBack(&first);
@@ -189,6 +265,7 @@ void LinkedListTest()
 	////
 	//LinkedListPopBack(&first);
 
-
+	//LinkedListPrintReverseRecursion(first);
+	//printf("\n");
 	LikedListPrint(first);
 }

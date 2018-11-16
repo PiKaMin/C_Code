@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Test_01_11_10.h"
+#include "Test_09_11_16.h"
 //所有的C语言作业运行测试
 //2018年 10 月 31 日开始
 
@@ -37,12 +38,16 @@ extern void reverse_string(char * string);
 void PrintArr(int* arr, int length);
 int main()
 {
-	//1. 初始化游戏
-	InitBorad();
-	//2. 打印棋盘
-	PrintBoard();
-	//3.游戏循环
-	BoradGameLoop();
+	////1. 初始化游戏
+	//InitBorad();
+	////2. 打印棋盘
+	//PrintBoard();
+	////3.游戏循环
+	//BoradGameLoop();
+
+	//扫雷游戏
+	MineSweeper();
+
 
 	system("pause");
 	return 0;
