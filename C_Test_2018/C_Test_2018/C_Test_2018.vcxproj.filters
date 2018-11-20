@@ -34,6 +34,12 @@
     <Filter Include="源文件\第九次作业">
       <UniqueIdentifier>{d79d41c1-b6af-4c85-ab36-4c079270b392}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\NewFilter1">
+      <UniqueIdentifier>{99823281-dec2-46d6-bb43-c98b262eb302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\NewFilter1\第十次作业">
+      <UniqueIdentifier>{1606729b-a37e-4017-b7a0-48b4e5ef6c2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -106,6 +112,9 @@
   <ItemGroup>
     <ClInclude Include="Test_09_11_16.h">
       <Filter>源文件\第九次作业</Filter>
+    </ClInclude>
+    <ClInclude Include="Test_01_11_20.h">
+      <Filter>源文件\NewFilter1\第十次作业</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
