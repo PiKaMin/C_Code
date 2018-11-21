@@ -5,6 +5,7 @@
 #include "Test_01_11_10.h"
 #include "Test_09_11_16.h"
 #include "Test_01_11_20.h"
+#include "Test_02_11_20.h"
 //所有的C语言作业运行测试
 //2018年 10 月 31 日开始
 
@@ -50,8 +51,10 @@ int main()
 	//MineSweeper();
 	
 	//第十次作业
-	Test2_11_20();
+	Test1_11_20();
 
+	//printf("%x\n" , -3);
+	printf("%d\n", count_one_bits(15));
 	system("pause");
 	return 0;
 	//PrintDiamond(15);

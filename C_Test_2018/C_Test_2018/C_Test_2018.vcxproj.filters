@@ -40,6 +40,9 @@
     <Filter Include="源文件\NewFilter1\第十次作业">
       <UniqueIdentifier>{1606729b-a37e-4017-b7a0-48b4e5ef6c2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\NewFilter1\第十一次作业">
+      <UniqueIdentifier>{b2ec3902-4830-4146-8a42-cd2559f429d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -115,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="Test_01_11_20.h">
       <Filter>源文件\NewFilter1\第十次作业</Filter>
+    </ClInclude>
+    <ClInclude Include="Test_02_11_20.h">
+      <Filter>源文件\NewFilter1\第十一次作业</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -139,6 +139,7 @@
     <ClCompile Include="Test_07_11_7.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Test_02_11_20.h" />
     <ClInclude Include="Test_01_11_20.h" />
     <ClInclude Include="Test_09_11_16.h" />
   </ItemGroup>
