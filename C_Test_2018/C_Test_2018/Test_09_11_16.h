@@ -180,11 +180,16 @@ static int MineSweeperGameLoop(char showMap[MAP_ROW + 2][MAP_COL + 2]
 	int row, col;
 	while (1)
 	{
+		int c;
+		
 		printf("输入要打开的 * 坐标 (row col) : ");
 		scanf("%d %d" , &row , &col);
+		while ((c = getchar()) != EOF && c != '\n')
+			;
 		//检测用户输入坐标的合法性  row[1 , 10]   col[1 , 10]  showMap[row][col] == *
 		if (!CheckUserInput(showMap , row , col))
 		{
+			
 			//输入不合法
 			printf("输入不合法 , 重新输入\n");
 			continue;

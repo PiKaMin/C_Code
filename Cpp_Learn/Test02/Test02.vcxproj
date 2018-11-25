@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{D3F6017D-BAFC-4D9E-A25C-2810615D9A83}</ProjectGuid>
-    <RootNamespace>CTest2018</RootNamespace>
+    <ProjectGuid>{B831657B-119E-4682-B710-C4DC0D4EF900}</ProjectGuid>
+    <RootNamespace>Test02</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,34 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bin_search.c" />
-    <ClCompile Include="main.c" />
-    <ClCompile Include="Test_01_11_10.h" />
-    <ClCompile Include="Test_03_11_7.c" />
-    <ClCompile Include="Test_01_10_31.c" />
-    <ClCompile Include="Test_01_11_2.c" />
-    <ClCompile Include="Test_01_11_4.c" />
-    <ClCompile Include="Test_01_11_7.c" />
-    <ClCompile Include="Test_02_10_31.c" />
-    <ClCompile Include="Test_02_11_2.c" />
-    <ClCompile Include="Test_02_11_4.c" />
-    <ClCompile Include="Test_02_11_7.c" />
-    <ClCompile Include="Test_03_10_31.c" />
-    <ClCompile Include="Test_03_11_2.c" />
-    <ClCompile Include="Test_03_11_4.c" />
-    <ClCompile Include="Test_04_11_2.c" />
-    <ClCompile Include="Test_04_11_4.c" />
-    <ClCompile Include="Test_04_11_7.c" />
-    <ClCompile Include="Test_05_11_7.c" />
-    <ClCompile Include="Test_05_11_4.c" />
-    <ClCompile Include="Test_06_11_7.c" />
-    <ClCompile Include="Test_07_11_7.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Test_01_11_25.h" />
-    <ClInclude Include="Test_02_11_20.h" />
-    <ClInclude Include="Test_01_11_20.h" />
-    <ClInclude Include="Test_09_11_16.h" />
+    <ClCompile Include="Test01.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

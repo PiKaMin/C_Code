@@ -31,5 +31,42 @@ int count_one_bits(int value)
 
 void GetBinaryEvenAndOddSeq(int num)
 {
+								 
+}
 
+//3. 输出一个整数的每一位。
+// 忽略输入 0 的情况    num != 0
+void PrintNum(int num)
+{
+	if (num == 0)
+		return;
+
+	int tmp = num % 10;
+	PrintNum(num / 10);
+	if (tmp < 0) tmp = -tmp;
+	printf("%d " , tmp);
+}
+
+
+//4.编程实现：
+//两个int（32位）整数m和n的二进制表达中，有多少个位(bit)不同？
+//输入例子 :
+//1999 2299
+//输出例子 : 7
+
+void FindBitDifferent(int num1 , int num2)
+{
+	int differentCount = 0;
+	//都是32位,所以循环32次
+	for (int i = 0; i < 32; i++)
+	{
+		int temp1 = (num1 >> i) & 1; // num1当前的最后一位
+		int temp2 = (num2 >> i) & 1;
+
+		if (temp1 != temp2)
+			++differentCount;
+
+	}
+
+	printf("有 %d 个bit位不一样", differentCount);
 }
