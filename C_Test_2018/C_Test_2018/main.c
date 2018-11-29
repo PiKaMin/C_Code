@@ -37,6 +37,7 @@ extern int MyStrlenNotRecursion(char* str);
 extern int MyStrlenRecursion(char* str);
 extern void PrintNumber(int n);
 extern void reverse_string(char * string);
+void reverse_string2(char *  string);
 
 void PrintArr(int* arr, int length);
 int main()
@@ -55,10 +56,13 @@ int main()
 	//Test1_11_20();
 	//PrintAverage(-20, 0);
 	//printf("%u\n", reverse_bit(25));
-	FindSingleNum();
+	//FindSingleNum();
 	//FindBitDifferent(1, -1);
 	//printf("%x\n" , -3);
 	//printf("%d\n", count_one_bits(15));
+	char str[] = "1234567";
+	reverse_string2(str);
+	printf("%s", str);
 	printf("\n");
 	system("pause");
 	return 0;

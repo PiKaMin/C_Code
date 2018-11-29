@@ -20,3 +20,22 @@ void reverse_string(char * string)
 
 	}
 }
+
+//·ÇµÝ¹é
+void reverse_string2(char * string) 
+{
+	int start = 0;
+	int end = MyStrlenRecursion(string) - 1;
+
+
+	
+	while (start < end)
+	{
+		char temp = string[start];
+		string[start] = string[end];
+		string[end] = temp;
+
+		start++;
+		end--;
+	}
+}
