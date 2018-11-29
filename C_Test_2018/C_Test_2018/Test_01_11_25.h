@@ -46,9 +46,17 @@ void PrintAverage(int a , int b)
 //3.编程实现：
 //一组数据中只有一个数字出现了一次。其他所有数字都是成对出现的。
 //请找出这个数字。（使用位运算）
+//利用异或的特性:两个相同数异或等于0,一个数和 0 异或等于本身
 void FindSingleNum()
 {
-
+	int arr[] = { 18, 6, 17, 17, 18  , 19 , 1 , 6 , 19 }; //一组数据
+	int length = sizeof(arr) / sizeof(arr[0]);
+	int res = arr[0];
+	for (int i = 1; i < length; i++)
+	{
+		res = res ^ arr[i];
+	}
+	printf("出现一次的数字是 : %d\n", res);
 }
 
 //4.

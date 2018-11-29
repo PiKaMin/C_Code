@@ -16,7 +16,7 @@ void reverse_string(char * string)
 		string[0] = string[len - 1];
 		string[len - 1] = '\0';
 		reverse_string(string + 1);
-		string[len - 1] = temp;
+		string[len - 1] = temp	;
 
 	}
 }

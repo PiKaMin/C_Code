@@ -54,7 +54,8 @@ int main()
 	//第十次作业
 	//Test1_11_20();
 	//PrintAverage(-20, 0);
-	printf("%u\n", reverse_bit(25));
+	//printf("%u\n", reverse_bit(25));
+	FindSingleNum();
 	//FindBitDifferent(1, -1);
 	//printf("%x\n" , -3);
 	//printf("%d\n", count_one_bits(15));
