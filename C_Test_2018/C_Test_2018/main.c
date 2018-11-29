@@ -40,6 +40,12 @@ extern void reverse_string(char * string);
 void reverse_string2(char *  string);
 
 void PrintArr(int* arr, int length);
+
+void Test(char* str1 , char* str2)
+{
+	str1[1] = str1[3];
+	printf("%s", str1);
+}
 int main()
 {
 	////1. ³õÊ¼»¯ÓÎÏ·
@@ -60,9 +66,10 @@ int main()
 	//FindBitDifferent(1, -1);
 	//printf("%x\n" , -3);
 	//printf("%d\n", count_one_bits(15));
-	char str[] = "1234567";
-	reverse_string2(str);
-	printf("%s", str);
+	//char * s = "1234567";
+	//char str[] = "1234567";
+	//Test(str , "1234567");
+	GetBinaryEvenAndOddSeq(25);
 	printf("\n");
 	system("pause");
 	return 0;
@@ -102,6 +109,7 @@ int main()
 
 	
 }
+
 
 void PrintArr(int* arr, int length)
 {

@@ -31,7 +31,18 @@ int count_one_bits(int value)
 
 void GetBinaryEvenAndOddSeq(int num)
 {
-								 
+	printf("偶数位:");
+	for (int i = 0; i < 32; i += 2)
+	{
+		printf("%d " , (num >> i) & 0x1);
+	}
+	printf("\n");
+
+	printf("奇数位:");
+	for (int i = 1; i < 32; i += 2)
+	{
+		printf("%d ", (num >> i) & 0x1);
+	}
 }
 
 //3. 输出一个整数的每一位。
