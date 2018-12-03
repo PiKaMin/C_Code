@@ -1,12 +1,13 @@
 #include <iostream>
+#include <cstdlib>
 #include "Complex.h"
 using namespace std;
 
 int main()
 {
-	const Complex c(1, 2);
-	c.GetIm();
+	Complex c(1, 2);
 	
-	
+	cout << c << endl;
+	system("pause");
 	return 0;
 }
