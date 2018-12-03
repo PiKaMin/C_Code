@@ -31,15 +31,16 @@ int count_one_bits(int value)
 
 void GetBinaryEvenAndOddSeq(int num)
 {
-	printf("偶数位:");
-	for (int i = 0; i < 32; i += 2)
+	
+	printf("奇数位:");
+	for (int i = 30; i >= 0 ; i -= 2)
 	{
 		printf("%d " , (num >> i) & 0x1);
 	}
 	printf("\n");
 
-	printf("奇数位:");
-	for (int i = 1; i < 32; i += 2)
+	printf("偶数位:");
+	for (int i = 31; i > 0; i -= 2)
 	{
 		printf("%d ", (num >> i) & 0x1);
 	}
@@ -65,6 +66,7 @@ void PrintNum(int num)
 //1999 2299
 //输出例子 : 7
 
+//还可以 num1 ^ num2 结果中1的个数就是不同位的个数.
 void FindBitDifferent(int num1 , int num2)
 {
 	int differentCount = 0;
