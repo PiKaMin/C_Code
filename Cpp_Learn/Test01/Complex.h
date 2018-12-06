@@ -47,10 +47,6 @@ public:
 private:   // 所有数据的声明都应该在private下
 	double re; // 实部
 	double im; // 虚部
-
-	
-	
-
 };
 
 

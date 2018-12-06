@@ -94,12 +94,33 @@ void FindKiller()
 
 
 //3.在屏幕上打印杨辉三角。
-//1
-//1 1
+//  1
+// 1  1
 //1 2 1
 //1 3 3 1
 
-void PrintYangHuiTriangle()
+#define N 10
+void PrintYangHuiTriangle() // N : 杨辉三角的层数
 {
-
+	int arr[N][N] = { 0 };
+	for (int i = 0; i < N; i++) //控制层
+	{
+		for (int m = 0; m < 2 * (N - i) ; m++)
+		{
+			printf(" ");
+		}
+		for (int j = 0; j <= i; j++)
+		{
+			if ((j == 0) || (j == i))
+			{
+				arr[i][j] = 1;
+			}
+			else
+			{
+				arr[i][j] = arr[i - 1][j] + arr[i - 1][j - 1];
+			}
+			printf("%4d ", arr[i][j]);
+		}
+		printf("\n");
+	}
 }

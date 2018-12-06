@@ -69,3 +69,48 @@ void FindSingleNum()
 //	student a am i
 //	i ma a tneduts
 //	i am a student
+int MyLen(char* str)
+{
+	int len = 0;
+	for (char* cur = str; *cur != '\0'; cur++)
+	{
+		len++;
+	}
+	return len;
+}
+void reverse_string(char* start, char* end)
+{
+	while (start < end)
+	{
+		char temp = *start;
+		*start = *end;
+		*end = temp;
+		++start;
+		--end;
+	}
+}
+void reverse(char* str)
+{
+	int len = MyLen(str);
+	char* start = str;
+	char* end = str + len - 1;
+	reverse_string(start, end);
+
+	char* cur = str;
+	while (*cur)
+	{
+		char* st = cur;
+		while (*cur != ' ' && *cur != '\0')
+		{
+			cur++;
+		}
+		reverse_string(st, cur);
+		while (cur == ' ')
+		{
+			cur++;
+		}
+	}
+
+}
+
+

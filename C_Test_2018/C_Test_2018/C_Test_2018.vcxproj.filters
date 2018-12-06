@@ -43,6 +43,9 @@
     <Filter Include="源文件\第十二次作业">
       <UniqueIdentifier>{99823281-dec2-46d6-bb43-c98b262eb302}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\第十三次作业">
+      <UniqueIdentifier>{6e077b04-fb60-46f9-933d-191e4b4fd92d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -110,6 +113,9 @@
     </ClCompile>
     <ClCompile Include="Test_01_11_10.h">
       <Filter>源文件\第八次作业</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_01_12_06.c">
+      <Filter>源文件\第十三次作业</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

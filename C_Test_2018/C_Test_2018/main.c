@@ -69,7 +69,9 @@ int main()
 	//char * s = "1234567";
 	//char str[] = "1234567";
 	//Test(str , "1234567");
-	GetBinaryEvenAndOddSeq(25);
+	//GetBinaryEvenAndOddSeq(25);
+	//PrintYangHuiTriangle();
+	printf("%u",  reverse_bit(25));
 	printf("\n");
 	system("pause");
 	return 0;
